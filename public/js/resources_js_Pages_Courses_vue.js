@@ -12,18 +12,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'home',
-  components: {},
-  data: function data() {
-    return {
-      user: {
-        email: "",
-        password: "",
-        validated: false
-      }
-    };
+  props: {
+    title: String
   },
-  methods: {}
+  setup: function setup(props) {
+    console.log(props.title);
+  }
 });
 
 /***/ }),
@@ -40,7 +34,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return " Olá sou a Home! ";
+  return " Cursos! ";
 }
 
 /***/ }),

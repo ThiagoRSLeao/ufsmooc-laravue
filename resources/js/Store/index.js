@@ -7,20 +7,20 @@ const store = createStore({
         user: null,
     },
     getters:{
-        /*getAuth: state => {
+        getAuth: state => {
             return {Authorization: "Bearer "+ state.user.token};
-        },*/
-        /*getHeader: state => {
+        },
+        getHeader: state => {
             return {headers: {Authorization: "Bearer "+ state.user.token}};            
-        }*/
+        }
     },
     mutations: {
-        /*async setToken(state, user){
+        async setToken(state, user){
             state.user = {token: user.access_token, expiration: new Date(user.expiration)}
-        },*/
-        /*async destroyToken(state){
+        },
+        async destroyToken(state){
             state.user = null;
-        }*/
+        }
     },
     plugins: [createPersistedState()],
 });

@@ -6,9 +6,9 @@ const router = createRouter({
     routes
 });
 
-/*router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
     // redirect to login page if not logged in and trying to access a restricted page
-    const publicPages = ['/visitor','/login','/'];
+    const publicPages = ['/home','/login','/register','/'];
     if(publicPages.includes(to.path)){
       next();
     }
@@ -18,10 +18,10 @@ const router = createRouter({
       const loggedIn = (JSON.parse(localStorage.getItem('vuex'))).user;  
     
       if (authRequired && !loggedIn) {
-        return next('/visitor'); //verificar no back end se o token é valido ainda
+        return next('/login'); //verificar no back end se o token é valido ainda
       }
       next();
     }    
-});*/
+});
 
 export default router;

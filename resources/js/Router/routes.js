@@ -14,17 +14,7 @@ const routes = [
         component: () => import("../Pages/Panel.vue"),
         path: "/panel", 
     },
-    {
-        name: "login",
-        component: () => import("../Pages/Login.vue"),
-        path: "/login", 
-    },
-    {
-        name: "register",
-        component: () => import("../Pages/Register.vue"),
-        path: "/register", 
-    },
-    /*{                
+    {                
         name: "courses",
         component: () => import("../Pages/Courses.vue"),
         path: "/courses", 
@@ -39,7 +29,16 @@ const routes = [
         component: () => import("../Pages/Doubts.vue"),
         path: "/doubts", 
     },
-    */
+    {
+        name: "login",
+        component: () => import("../Pages/Login.vue"),
+        path: "/login", 
+    },
+    {
+        name: "register",
+        component: () => import("../Pages/Register.vue"),
+        path: "/register", 
+    },
 ];
 
 export default routes;

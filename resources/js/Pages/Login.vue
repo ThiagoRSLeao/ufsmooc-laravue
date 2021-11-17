@@ -18,7 +18,7 @@ export default {
   methods:{
     async login(){
       var res = await axios.post("/api/auth/login", this.user);
-      console.log(res);
+      this.$store.commit("setToken", res.data);
     }
   }
 }
