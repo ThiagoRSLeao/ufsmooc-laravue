@@ -16,7 +16,9 @@
     </header>
 
     <section class="section-main wrapper">
+
         <router-view></router-view>
+        
     </section>
 
     <div class="push">
