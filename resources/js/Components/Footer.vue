@@ -31,15 +31,13 @@ export default{
 }
 footer > #footer-btns{
     
-    margin-left: 25px;
     color: #FFFFFF;
     position: relative;
     float: left;
 }
 footer > #footer-btns > span
 {
-    padding-right: 20px;
-    padding-left: 20px; 
+    padding: 0px 50px;
     transition: 0.25s 0s ease;
 }
 footer > #footer-btns > span:hover

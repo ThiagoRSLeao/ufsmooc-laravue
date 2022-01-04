@@ -25,7 +25,7 @@ export default{
 <style>
 #universityEmblem
 {
-    margin-left: 25px;
+    margin-left: 50px;
     width: 120px;
     padding-top: 6px;
 }
@@ -54,6 +54,7 @@ header > .nav-container > .nav-box-pages
 }
 header > .nav-container > .nav-box-login
 {
+    margin-right: 50px;
     padding-top: 30px;
     height: 75px;
     width: 180px;

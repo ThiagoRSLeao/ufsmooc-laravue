@@ -5,13 +5,9 @@
 </template>
 
 
-
-
-
-
 <script>
-import Navbar from './components/Navbar.vue';
-import Footer from './components/Footer.vue';
+import Navbar from './Components/Navbar.vue';
+import Footer from './Components/Footer.vue';
 export default {
     name: "app",
     components: {
@@ -20,9 +16,6 @@ export default {
     }
 }
 </script>
-
-
-
 
 
 <style>

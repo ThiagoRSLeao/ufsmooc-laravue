@@ -1,13 +1,9 @@
 const routes = [
     {                
         name: "home",
-        component: () => import("../Pages/Home.vue"),
-        path: "/", 
-    },
-    {                
-        name: "home",
-        component: () => import("../Pages/Home.vue"),
         path: "/home", 
+        alias: ['/', ''],
+        component: () => import("../Pages/Home.vue"),
     },
     {
         name: "panel",
