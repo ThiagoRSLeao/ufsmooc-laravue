@@ -1,31 +1,7 @@
 <template>
-    <header>
-        <router-link to="/home"> <img src='../img/landing/universityEmblem.png' id="universityEmblem" /> </router-link>
-        <div class='nav-container'>
-            <div class='nav-box-pages'> 
-                <span><router-link to="/panel"> Painel</router-link></span> 
-                <span><router-link to="/courses"> Cursos  </router-link></span>
-                <span><router-link to="/about"> Sobre </router-link></span>
-                <span><router-link to="/doubts"> Dúvidas  </router-link></span>
-            </div>
-            <div class='nav-box-login'>            
-                <span><router-link to="/login"> Entrar </router-link></span>
-                <span class='register-btn' ><router-link  to="/register"> Register </router-link></span>
-            </div>
-        </div>
-    </header>
-
-    <section class="section-main wrapper">
-
-        <router-view></router-view>
-        
-    </section>
-
-    <div class="push">
-        <footer>
-            
-        </footer>
-    </div>
+    <Navbar />
+        <router-view />
+    <Footer />
 </template>
 
 
@@ -34,11 +10,14 @@
 
 
 <script>
+import Navbar from './components/Navbar.vue';
+import Footer from './components/Footer.vue';
 export default {
     name: "app",
     components: {
-        
-    },
+        Navbar,
+        Footer
+    }
 }
 </script>
 
@@ -52,6 +31,7 @@ export default {
     padding: 0;
     margin: 0;
     font-family: 'Rubik';
+    font-size: 15px;
     /*font-family: 'Zapf Humanist BT';*/
 }
 input:focus
@@ -66,124 +46,12 @@ body
 {
     min-height: 600px;
     height: 100%;
+    background-color: #F7F9FD;
 }
-.section-main
-{
-    padding-top: 20px;
-    height: inherit;
-}
-header
-{
-    display: flex;
-    align-items: center;
-    height: 110px;
-    width: 100%;
-    background: #21376B;
-    margin-left: 0px;
-}
-#universityEmblem
-{
-    margin-left: 25px;
-    margin-right: 5px;
-    width: 220px;
-}
-header > .nav-container
-{
-    margin-left: 20px;
-    height: 100px;
-    width: inherit; 
-}
-header > .nav-container > .nav-box-pages
-{
-    padding-top: 52px;
-    height: 55px;
-    float: left;
-}
-header > .nav-container > .nav-box-login
-{
-    padding-top: 25px;
-    height: 75px;
-    width: 180px;
-    display: flex;
-    align-items: center;    
-    float: right;
-}
-header > .nav-container > .nav-box-pages > span
-{
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 15px;
-    font-size: 14pt;
-    text-decoration: none;    
-    height: auto;
-    color: white;
-    transition: 0.25s 0s ease;
-}
-header > .nav-container > .nav-box-pages > span
-{
-    font-size: 14pt;
-    text-decoration: none;    
-    height: auto;
-    color: white;
-    position: relative;
-    transition: 0.25s 0s ease;
-}
-header > .nav-container > .nav-box-pages > span::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: 0px;
-    left: 50%;
-    background-color: #f19a59;
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-header > .nav-container > .nav-box-pages > span:hover::after 
-{
-    opacity: 100%;
-    left: 0;
-    height: 5px;
-    width: 100%;
-}
-header > .nav-container > .nav-box-login > span
-{
-    font-size: 14pt;
-    text-decoration: none;    
-    height: auto;
-    color: white;
-    transition: 0.25s 0s ease;
-}
-header > .nav-container > .nav-box-login > .register-btn
-{
-    padding: 8px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-radius: 25px;    
-    background-color:#2754BE;
-    margin-left: 15px;
-    font-size: 14pt;
-    text-decoration: none;    
-    height: auto;
-    color: white;
-}     
-header > .nav-container > .nav-box-login > span:hover
-{    
-    color: rgb(182, 182, 182);
-}
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    margin: 0 auto -50px; 
-}
-footer
-{
-    position: relative;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-    background: #21376B;
+
+@media (max-width: 600px){
+    div {
+        
+    }
 }
 </style>
