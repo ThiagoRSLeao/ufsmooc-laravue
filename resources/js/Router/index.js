@@ -15,8 +15,12 @@ router.beforeEach((to, from, next) => {
     else
     {
       const authRequired = !publicPages.includes(to.path);
-      const loggedIn = (JSON.parse(localStorage.getItem('vuex'))).user;  
-    
+      if((JSON.parse(localStorage.getItem('vuex')))){
+        return next('/login');
+      }
+      
+      const loggedIn = (JSON.parse(localStorage.getItem('vuex'))).user;   
+
       if (authRequired && !loggedIn) {
         return next('/login'); //verificar no back end se o token é valido ainda
       }

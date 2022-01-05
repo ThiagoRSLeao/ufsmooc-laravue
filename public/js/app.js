@@ -18445,6 +18445,11 @@ router.beforeEach(function (to, from, next) {
     next();
   } else {
     var authRequired = !publicPages.includes(to.path);
+
+    if (JSON.parse(localStorage.getItem('vuex'))) {
+      return next('/login');
+    }
+
     var loggedIn = JSON.parse(localStorage.getItem('vuex')).user;
 
     if (authRequired && !loggedIn) {

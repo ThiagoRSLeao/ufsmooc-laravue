@@ -38,21 +38,26 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
+                console.log("Tentei logar");
+                _context.next = 3;
                 return axios.post("/api/auth/login", _this.user);
 
-              case 2:
+              case 3:
                 res = _context.sent;
+                console.log(res);
 
                 _this.$store.commit("setToken", res.data);
 
-              case 4:
+              case 6:
               case "end":
                 return _context.stop();
             }
           }
         }, _callee);
       }))();
+    },
+    teste: function teste() {
+      console.log("Tentei logar");
     }
   }
 });
@@ -94,7 +99,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[3] || (_cache[3] = function ($event) {
       return $options.login();
     })
-  }, "Login Seguro")], 64
+  }, "Login Seguro"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+    onClick: _cache[4] || (_cache[4] = function ($event) {
+      return $options.teste();
+    })
+  }, "Teste")], 64
   /* STABLE_FRAGMENT */
   );
 }

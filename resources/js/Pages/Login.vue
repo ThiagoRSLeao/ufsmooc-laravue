@@ -3,6 +3,7 @@
   <input type="email" v-model="user.email">
   <input type="password" v-model="user.password">
   <button v-on:click="login()">Login Seguro</button>
+  <button v-on:click="teste()">Teste</button>
 </template>
 
 <script>
@@ -17,8 +18,13 @@ export default {
   },
   methods:{
     async login(){
+      console.log("Tentei logar");
       var res = await axios.post("/api/auth/login", this.user);
+      console.log(res);
       this.$store.commit("setToken", res.data);
+    },
+    teste(){      
+      console.log("Tentei logar");
     }
   }
 }
