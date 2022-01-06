@@ -25,7 +25,7 @@ export default{
     name: "Navbar"
 }
 
-const btn = document.getElementById('nav-menu');
+/*const btn = document.getElementById('nav-menu');
 
 btn.addEventListener("click", function(){
     var nav = document.getElementById("nav-container");
@@ -36,7 +36,7 @@ btn.addEventListener("click", function(){
     else{
         nav.style.display = "none";
     }
-})
+})*/
 </script>
 
 <style>

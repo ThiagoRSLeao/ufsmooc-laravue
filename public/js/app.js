@@ -19597,16 +19597,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Navbar"
 });
-var btn = document.getElementById('nav-menu');
-btn.addEventListener("click", function () {
-  var nav = document.getElementById("nav-container");
+/*const btn = document.getElementById('nav-menu');
 
-  if (nav.style.display === "none") {
-    nav.style.display = "block";
-  } else {
-    nav.style.display = "none";
-  }
-});
+btn.addEventListener("click", function(){
+    var nav = document.getElementById("nav-container");
+
+    if(nav.style.display === "none"){
+        nav.style.display = "block";
+    }
+    else{
+        nav.style.display = "none";
+    }
+})*/
 
 /***/ }),
 
