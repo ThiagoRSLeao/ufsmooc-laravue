@@ -1,6 +1,9 @@
 <template>
     <header>
-        <router-link to="/home"> <img src="..\..\img\landing/universityEmblem.png" id="universityEmblem" alt="Emblema UFSM" /> </router-link>
+        <button id="nav-menu"> /// </button>
+        <div class="img-wrapper">
+            <router-link to="/home"> <img src="..\..\img\landing/universityEmblem.png" id="universityEmblem" alt="Emblema UFSM" /> </router-link>
+        </div>
         <div class='nav-container'>
             <div class='nav-box-pages'> 
                 <span><router-link to="/panel"> Painel </router-link></span> 
@@ -13,6 +16,7 @@
                 <span class='register-btn' ><router-link  to="/register"> Cadastrar </router-link></span>
             </div>
         </div>
+        <button id="teste"> User </button>
     </header>
 </template>
 
@@ -20,6 +24,19 @@
 export default{
     name: "Navbar"
 }
+
+const btn = document.getElementById('nav-menu');
+
+btn.addEventListener("click", function(){
+    var nav = document.getElementById("nav-container");
+
+    if(nav.style.display === "none"){
+        nav.style.display = "block";
+    }
+    else{
+        nav.style.display = "none";
+    }
+})
 </script>
 
 <style>
@@ -40,19 +57,19 @@ header
     background: #21376B;
     margin-left: 0px;
 }
-header > .nav-container
+.nav-container
 {
     margin-left: 20px;
     height: 100px;
     width: inherit; 
 }
-header > .nav-container > .nav-box-pages
+.nav-box-pages
 {
     padding-top: 38px;
     height: 55px;
     float: left;
 }
-header > .nav-container > .nav-box-login
+.nav-box-login
 {
     margin-right: 50px;
     padding-top: 30px;
@@ -62,7 +79,7 @@ header > .nav-container > .nav-box-login
     align-items: center;    
     float: right;
 }
-header > .nav-container > .nav-box-login > .register-btn
+.register-btn
 {
     border-radius: 15px;    
     background-color:#395EB7;
@@ -72,7 +89,7 @@ header > .nav-container > .nav-box-login > .register-btn
     text-decoration: none;    
     height: auto;
 }     
-header > .nav-container > .nav-box-pages > span
+.nav-box-pages > span
 {
     padding-left: 20px;
     padding-right: 20px;
@@ -84,7 +101,7 @@ header > .nav-container > .nav-box-pages > span
     transition: 0.25s 0s ease;
     position: relative;
 }
-header > .nav-container > .nav-box-pages > span::after {
+.nav-box-pages > span::after {
     content: "";
     position: absolute;
     width: 0%;
@@ -95,14 +112,14 @@ header > .nav-container > .nav-box-pages > span::after {
     transition: all 0.3s ease;
     border-radius: 207px;
   }
-header > .nav-container > .nav-box-pages > span:hover::after 
+.nav-box-pages > span:hover::after 
 {
     opacity: 100%;
     left: 15%;
     height: 5px;
     width: 68%;
 }
-header > .nav-container > .nav-box-login > span
+.nav-box-login > span
 {
     padding-right: 10px;
     padding-left: 10px;
@@ -112,8 +129,34 @@ header > .nav-container > .nav-box-login > span
     color: white;
     transition: 0.25s 0s ease;
 }
-header > .nav-container > .nav-box-login > span:hover
+.nav-box-login > span:hover
 {    
     color: rgb(182, 182, 182);
+}
+#nav-menu{
+    margin: 0 20px;
+    display: none;
+}
+#teste{
+    margin: 0 20px;
+    display: none;
+}
+@media (max-width: 860px){
+    .nav-container{
+        display: none;
+    }
+    .img-wrapper{
+        width: 100%;
+        text-align: center;
+    }
+    #universityEmblem{
+        margin-left: 0;
+    }
+    #nav-menu{
+        display: block;
+    }
+    #teste{
+        display: block;
+    }
 }
 </style>

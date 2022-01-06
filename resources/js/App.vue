@@ -42,9 +42,4 @@ body
     background-color: #F7F9FD;
 }
 
-@media (max-width: 600px){
-    div {
-        
-    }
-}
 </style>
