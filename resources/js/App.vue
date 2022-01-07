@@ -19,8 +19,6 @@ export default {
 
 
 <style>
-:root{
-}
 *
 {
     padding: 0;

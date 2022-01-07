@@ -62,24 +62,6 @@ export default{
         window.removeEventListener('resize', this.onResize); 
     }
 }
-
-<<<<<<< HEAD
-=======
-/*const btn = document.getElementById('nav-menu');
->>>>>>> 56c1bc963f88767ce42987b50a801d108edd5ee2
-
-
-<<<<<<< HEAD
-
-=======
-    if(nav.style.display === "none"){
-        nav.style.display = "block";
-    }
-    else{
-        nav.style.display = "none";
-    }
-})*/
->>>>>>> 56c1bc963f88767ce42987b50a801d108edd5ee2
 </script>
 
 <style>
