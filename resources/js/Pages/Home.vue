@@ -26,7 +26,7 @@ export default {
   
   .courses-btn{  
     color: white;
-    background-color:#395EB7;
+    background-color:var(--main-color);
     padding: 16px 20px;
     text-decoration: none;    
     height: auto;
@@ -71,7 +71,7 @@ export default {
       height: 350px;
     }
     .main-container{
-      height: 100%;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;

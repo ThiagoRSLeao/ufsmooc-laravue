@@ -15,7 +15,7 @@ router.beforeEach((to, from, next) => {
     else
     {
       const authRequired = !publicPages.includes(to.path);
-      if((JSON.parse(localStorage.getItem('vuex')))){
+      if(!(JSON.parse(localStorage.getItem('vuex')))){
         return next('/login');
       }
       

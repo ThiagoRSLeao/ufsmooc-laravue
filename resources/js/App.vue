@@ -19,13 +19,16 @@ export default {
 
 
 <style>
+:root{
+}
 *
 {
     padding: 0;
     margin: 0;
     font-family: 'Rubik';
     font-size: 15px;
-    /*font-family: 'Zapf Humanist BT';*/
+    --main-color: #21376B;
+    --second-color: #395EB7;
 }
 input:focus
 {
@@ -37,7 +40,7 @@ html
 }
 body
 {
-    min-height: 600px;
+    min-height: 100vh;
     height: 100%;
     background-color: #F7F9FD;
 }

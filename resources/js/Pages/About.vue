@@ -20,29 +20,7 @@
       </div>
   </div>
   <div class='space'></div>
-  <div class='space'></div>
-  <div class='extra-info'>      
-    <div class='extra-info-start'>
-        <div> UFSM nas redes sociais: </div>
-        <div> 
-            <a href="https://www.instagram.com/ufsm.br/" target="_blank">Instagram</a>
-            <a href="https://pt-br.facebook.com/UFSM.BR/" target="_blank">Facebook </a>
-            <a href="https://twitter.com/ufsm_oficial" target="_blank">Twitter  </a>
-            <a href="https://www.youtube.com/channel/UC0U4Kuznv0YtRzULknjaZ2w" target="_blank">Youtube </a>
-            <a href="https://www.linkedin.com/school/ufsm/" target="_blank">LinkedIn  </a>
-        </div>         
-    </div>  
-    <div class='extra-info-end'>
-        <div class='extra-info-knowmore'>
-            <div> 
-                Saiba mais em:  
-            </div> 
-            <div> 
-                <a href="https://www.ufsm.br/"> https://www.ufsm.br/</a>
-            </div> 
-        </div>   
-    </div>  
-  </div>    
+  <div class='space'></div> 
 </template>
 
 

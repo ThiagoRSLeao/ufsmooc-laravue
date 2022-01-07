@@ -19595,20 +19595,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Navbar"
+  name: "Navbar",
+  data: function data() {
+    return {
+      dropMenu: false,
+      windowWidth: window.innerWidth
+    };
+  },
+  methods: {
+    onResize: function onResize() {
+      this.windowWidth = window.innerWidth;
+    },
+    dropDown: function dropDown() {
+      var nav = document.getElementById("nav-container");
+      this.dropMenu = !this.dropMenu;
+
+      if (this.dropMenu) {
+        console.log("Aberto");
+      } else {
+        console.log("Fechado");
+      }
+    }
+  },
+  computed: {
+    isMobile: function isMobile() {
+      console.log(this.windowWidth);
+      return this.windowWidth < 860;
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$nextTick(function () {
+      window.addEventListener('resize', _this.onResize);
+    });
+  },
+  beforeDestroy: function beforeDestroy() {
+    window.removeEventListener('resize', this.onResize);
+  }
 });
-/*const btn = document.getElementById('nav-menu');
-
-btn.addEventListener("click", function(){
-    var nav = document.getElementById("nav-container");
-
-    if(nav.style.display === "none"){
-        nav.style.display = "block";
-    }
-    else{
-        nav.style.display = "none";
-    }
-})*/
 
 /***/ }),
 
@@ -19651,6 +19676,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _img_comp_footer_instagram_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../img/comp_footer/instagram.png */ "./resources/img/comp_footer/instagram.png");
+/* harmony import */ var _img_comp_footer_facebook_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/comp_footer/facebook.png */ "./resources/img/comp_footer/facebook.png");
+/* harmony import */ var _img_comp_footer_twitter_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../img/comp_footer/twitter.png */ "./resources/img/comp_footer/twitter.png");
+/* harmony import */ var _img_comp_footer_youtube_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../img/comp_footer/youtube.png */ "./resources/img/comp_footer/youtube.png");
+/* harmony import */ var _img_comp_footer_linkedin_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../img/comp_footer/linkedin.png */ "./resources/img/comp_footer/linkedin.png");
+
+
+
+
+
 
 var _hoisted_1 = {
   id: "footer"
@@ -19661,13 +19696,29 @@ var _hoisted_2 = {
 
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Política de privacidade ");
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ● ");
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "span-dot"
+}, "●", -1
+/* HOISTED */
+);
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Termos de uso ");
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ● ");
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "span-dot"
+}, "●", -1
+/* HOISTED */
+);
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Contatos ");
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "span-dot"
+}, "●", -1
+/* HOISTED */
+);
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"social-media\"><a href=\"https://www.instagram.com/ufsm.br/\" target=\"_blank\"><img src=\"" + _img_comp_footer_instagram_png__WEBPACK_IMPORTED_MODULE_1__["default"] + "\"></a><a href=\"https://pt-br.facebook.com/UFSM.BR/\" target=\"_blank\"><img src=\"" + _img_comp_footer_facebook_png__WEBPACK_IMPORTED_MODULE_2__["default"] + "\"></a><a href=\"https://twitter.com/ufsm_oficial\" target=\"_blank\"><img src=\"" + _img_comp_footer_twitter_png__WEBPACK_IMPORTED_MODULE_3__["default"] + "\"></a><a href=\"https://www.youtube.com/channel/UC0U4Kuznv0YtRzULknjaZ2w\" target=\"_blank\"><img src=\"" + _img_comp_footer_youtube_png__WEBPACK_IMPORTED_MODULE_4__["default"] + "\"></a><a href=\"https://www.linkedin.com/school/ufsm/\" target=\"_blank\"><img src=\"" + _img_comp_footer_linkedin_png__WEBPACK_IMPORTED_MODULE_5__["default"] + "\"></a></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
@@ -19699,7 +19750,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })])])]);
+  })]), _hoisted_8]), _hoisted_9]);
 }
 
 /***/ }),
@@ -19716,78 +19767,85 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var _img_landing_universityEmblem_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../img/landing/universityEmblem.png */ "./resources/img/landing/universityEmblem.png");
+/* harmony import */ var _img_comp_navbar_hamburguer_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../img/comp_navbar/hamburguer.png */ "./resources/img/comp_navbar/hamburguer.png");
+/* harmony import */ var _img_comp_navbar_universityEmblem_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/comp_navbar/universityEmblem.png */ "./resources/img/comp_navbar/universityEmblem.png");
 
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  id: "nav-menu"
-}, " /// ", -1
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: _img_comp_navbar_hamburguer_png__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, null, -1
 /* HOISTED */
 );
 
-var _hoisted_2 = {
+var _hoisted_2 = [_hoisted_1];
+var _hoisted_3 = {
   "class": "img-wrapper"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: _img_landing_universityEmblem_png__WEBPACK_IMPORTED_MODULE_1__["default"],
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: _img_comp_navbar_universityEmblem_png__WEBPACK_IMPORTED_MODULE_2__["default"],
   id: "universityEmblem",
   alt: "Emblema UFSM"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_4 = {
-  "class": "nav-container"
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Painel ");
+
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Cursos ");
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Sobre ");
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Dúvidas ");
+
+var _hoisted_9 = {
+  key: 1,
+  "class": "nav-box-login"
 };
-var _hoisted_5 = {
-  "class": "nav-box-pages"
-};
-
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Painel ");
-
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Cursos ");
-
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Sobre ");
-
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Dúvidas ");
-
 var _hoisted_10 = {
+  key: 2,
   "class": "nav-box-login"
 };
 
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Entrar ");
 
 var _hoisted_12 = {
+  key: 0,
   "class": "register-btn"
 };
 
 var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Cadastrar ");
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  id: "teste"
-}, " User ", -1
-/* HOISTED */
-);
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("header", null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("header", null, [$options.isMobile ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+    key: 0,
+    onClick: _cache[0] || (_cache[0] = function () {
+      return $options.dropDown && $options.dropDown.apply($options, arguments);
+    }),
+    id: "nav-menu"
+  }, _hoisted_2)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/home"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_3];
+      return [_hoisted_4];
     }),
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["nav-box-pages", {
+      open: $data.dropMenu,
+      mobile: $options.isMobile
+    }])
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/panel"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_6];
+      return [_hoisted_5];
     }),
     _: 1
     /* STABLE */
@@ -19796,7 +19854,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     to: "/courses"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_7];
+      return [_hoisted_6];
     }),
     _: 1
     /* STABLE */
@@ -19805,7 +19863,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     to: "/about"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_8];
+      return [_hoisted_7];
     }),
     _: 1
     /* STABLE */
@@ -19814,12 +19872,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     to: "/doubts"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_9];
+      return [_hoisted_8];
     }),
     _: 1
     /* STABLE */
 
-  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  })])], 2
+  /* CLASS */
+  ), _ctx.loggedIn ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("FOTO")])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/login"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -19828,7 +19888,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  })]), !$options.isMobile ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/register"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -19837,7 +19897,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })])])]), _hoisted_14]);
+  })])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]))]);
 }
 
 /***/ }),
@@ -19870,7 +19930,7 @@ router.beforeEach(function (to, from, next) {
   } else {
     var authRequired = !publicPages.includes(to.path);
 
-    if (JSON.parse(localStorage.getItem('vuex'))) {
+    if (!JSON.parse(localStorage.getItem('vuex'))) {
       return next('/login');
     }
 
@@ -20112,7 +20172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n*\r\n{\r\n    padding: 0;\r\n    margin: 0;\r\n    font-family: 'Rubik';\r\n    font-size: 15px;\r\n    /*font-family: 'Zapf Humanist BT';*/\n}\ninput:focus\r\n{\r\n    outline: none;\n}\nhtml\r\n{\r\n    height: 100%;\n}\nbody\r\n{\r\n    min-height: 600px;\r\n    height: 100%;\r\n    background-color: #F7F9FD;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n:root{\n}\n*\r\n{\r\n    padding: 0;\r\n    margin: 0;\r\n    font-family: 'Rubik';\r\n    font-size: 15px;\r\n    --main-color: #21376B;\r\n    --second-color: #395EB7;\n}\ninput:focus\r\n{\r\n    outline: none;\n}\nhtml\r\n{\r\n    height: 100%;\n}\nbody\r\n{\r\n    min-height: 100vh;\r\n    height: 100%;\r\n    background-color: #F7F9FD;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20136,7 +20196,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#footer\r\n{\r\n    position: absolute;\r\n    bottom: 0;\r\n    left: 0;\r\n    height: 80px;\r\n    background-color: #21376B;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: left;\r\n    width: 100%;\n}\nfooter > #footer-btns{\r\n    \r\n    color: #FFFFFF;\r\n    position: relative;\r\n    float: left;\n}\nfooter > #footer-btns > span\r\n{\r\n    padding: 0px 50px;\r\n    transition: 0.25s 0s ease;\n}\nfooter > #footer-btns > span:hover\r\n{\r\n    color: rgb(182, 182, 182);\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#footer\r\n{\r\n    padding: 20px 0;\r\n    min-height: 80px;\r\n    height: -webkit-fit-content;\r\n    height: -moz-fit-content;\r\n    height: fit-content;\r\n    background-color: var(--main-color);\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 100%;\n}\n#footer-btns{\r\n    margin-left: 30px;\r\n    color: #FFFFFF;\r\n    position: relative;\r\n    float: left;\n}\n#footer-btns > span > a\r\n{\r\n    padding: 0px 20px;\r\n    transition: 0.25s 0s ease;\n}\n#footer-btns > span > a:hover\r\n{\r\n    color: rgb(182, 182, 182);\n}\n.social-media{\r\n    display: flex;\r\n    justify-content: right;\r\n    align-items: center;\r\n    width: 200px;\r\n    margin-right: 50px;\n}\n.social-media > a{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: 0 10px;\n}\n.social-media > a > img{\r\n    height: 18px;\n}\n@media(max-width: 860px){\n#footer-btns{\r\n        margin-left: 10px;\r\n        display: flex;\r\n        flex-flow: column;\r\n        gap: 10px;\n}\n.span-dot{\r\n        display: none;\n}\n.social-media{\r\n        max-width: 100px;\r\n        max-height: 76px;\r\n        margin-right: 10px;\r\n        gap: 10px 0;\r\n        flex-flow: column;\r\n        flex-wrap: wrap;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20160,7 +20220,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#universityEmblem\r\n{\r\n    margin-left: 50px;\r\n    width: 120px;\r\n    padding-top: 6px;\n}\nheader\r\n{\r\n    position: relative;\r\n    top: 0;\r\n    display: flex;\r\n    align-items: center;\r\n    height: 80px;\r\n    width: 100%;\r\n    background: #21376B;\r\n    margin-left: 0px;\n}\n.nav-container\r\n{\r\n    margin-left: 20px;\r\n    height: 100px;\r\n    width: inherit;\n}\n.nav-box-pages\r\n{\r\n    padding-top: 38px;\r\n    height: 55px;\r\n    float: left;\n}\n.nav-box-login\r\n{\r\n    margin-right: 50px;\r\n    padding-top: 30px;\r\n    height: 75px;\r\n    width: 180px;\r\n    display: flex;\r\n    align-items: center;    \r\n    float: right;\n}\n.register-btn\r\n{\r\n    border-radius: 15px;    \r\n    background-color:#395EB7;\r\n    padding: 20px;\r\n    padding-top: 2px;\r\n    padding-bottom: 2px;\r\n    text-decoration: none;    \r\n    height: auto;\n}\n.nav-box-pages > span\r\n{\r\n    padding-left: 20px;\r\n    padding-right: 20px;\r\n    padding-bottom: 15px;\r\n    font-size: 14pt;\r\n    text-decoration: none;    \r\n    height: auto;\r\n    color: white;\r\n    transition: 0.25s 0s ease;\r\n    position: relative;\n}\n.nav-box-pages > span::after {\r\n    content: \"\";\r\n    position: absolute;\r\n    width: 0%;\r\n    height: 2px;\r\n    bottom: 0px;\r\n    left: 50%;\r\n    background-color: #FFFFFFFF;\r\n    transition: all 0.3s ease;\r\n    border-radius: 207px;\n}\n.nav-box-pages > span:hover::after \r\n{\r\n    opacity: 100%;\r\n    left: 15%;\r\n    height: 5px;\r\n    width: 68%;\n}\n.nav-box-login > span\r\n{\r\n    padding-right: 10px;\r\n    padding-left: 10px;\r\n    font-size: 14pt;\r\n    text-decoration: none;    \r\n    height: auto;\r\n    color: white;\r\n    transition: 0.25s 0s ease;\n}\n.nav-box-login > span:hover\r\n{    \r\n    color: rgb(182, 182, 182);\n}\n#nav-menu{\r\n    margin: 0 20px;\r\n    display: none;\n}\n#teste{\r\n    margin: 0 20px;\r\n    display: none;\n}\n@media (max-width: 860px){\n.nav-container{\r\n        display: none;\n}\n.img-wrapper{\r\n        width: 100%;\r\n        text-align: center;\n}\n#universityEmblem{\r\n        margin-left: 0;\n}\n#nav-menu{\r\n        display: block;\n}\n#teste{\r\n        display: block;\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#universityEmblem\r\n{\r\n    margin-left: 50px;\r\n    width: 120px;\n}\nheader\r\n{\r\n    position: relative;\r\n    top: 0;\r\n    display: flex;\r\n    align-items: center;\r\n    height: 80px;\r\n    width: 100%;\r\n    background: var(--main-color);\r\n    margin-left: 0px;\n}\n.nav-box-pages\r\n{\r\n    margin-left: 20px;\r\n    height: 100px;\r\n    width: inherit;\r\n    padding-top: 38px;\r\n    float: left;\n}\n.nav-box-pages.mobile{\r\n    display: none;\n}\n.nav-box-pages.open{\r\n    display: block;\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    align-items: center;\r\n    flex-flow:column;\r\n    background-color: var(--main-color);\r\n    border-right: 2px var(--second-color) solid;\r\n    border-bottom: 2px var(--second-color) solid;\r\n    width: 180px;\r\n    height: 240px;\r\n    margin-left: 0;\r\n    padding: 0;\r\n    position:absolute;\r\n    top: 80px;\r\n    left: 0;\n}\n.nav-box-login\r\n{\r\n    font-size: 16px;\r\n    min-width: 75px;\r\n    margin: 0 10px;\r\n    height: 75px;\r\n    display: flex;\r\n    align-items: center;    \r\n    float: right;\r\n    justify-content: center;\n}\n.register-btn\r\n{\r\n    margin-left: 20px;\r\n    margin-right: 40px;\r\n    border-radius: 15px;    \r\n    background-color:var(--second-color);\r\n    padding: 20px;\r\n    padding-top: 2px;\r\n    padding-bottom: 2px;\r\n    text-decoration: none;    \r\n    height: auto;\n}\n.nav-box-pages > span\r\n{\r\n    padding-left: 20px;\r\n    padding-right: 20px;\r\n    padding-bottom: 15px;\r\n    font-size: 14pt;\r\n    text-decoration: none;    \r\n    height: auto;\r\n    color: white;\r\n    transition: 0.25s 0s ease;\r\n    position: relative;\n}\n.nav-box-pages > span::after {\r\n    content: \"\";\r\n    position: absolute;\r\n    width: 0%;\r\n    height: 2px;\r\n    bottom: 0px;\r\n    left: 50%;\r\n    background-color: #FFFFFFFF;\r\n    transition: all 0.3s ease;\r\n    border-radius: 207px;\n}\n.nav-box-pages > span:hover::after \r\n{\r\n    opacity: 100%;\r\n    left: 15%;\r\n    height: 5px;\r\n    width: 68%;\n}\n.nav-box-login > span\r\n{\r\n    font-size: 14pt;\r\n    text-decoration: none;    \r\n    height: auto;\r\n    color: white;\r\n    transition: 0.25s 0s ease;\n}\n.nav-box-login > span:hover\r\n{    \r\n    color: rgb(182, 182, 182);\n}\n#nav-menu{\r\n    min-width: 75px;\r\n    margin: 0 10px;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\n}\n#nav-menu > img{\r\n    width: 28px;\n}\n@media (max-width: 860px){\n.img-wrapper{\r\n        width: 100%;\r\n        text-align: center;\n}\n#universityEmblem{\r\n        margin-left: 0;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20243,10 +20303,100 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
-/***/ "./resources/img/landing/universityEmblem.png":
-/*!****************************************************!*\
-  !*** ./resources/img/landing/universityEmblem.png ***!
-  \****************************************************/
+/***/ "./resources/img/comp_footer/facebook.png":
+/*!************************************************!*\
+  !*** ./resources/img/comp_footer/facebook.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/facebook.png?5e3962b431a4d96eed12474519c31891");
+
+/***/ }),
+
+/***/ "./resources/img/comp_footer/instagram.png":
+/*!*************************************************!*\
+  !*** ./resources/img/comp_footer/instagram.png ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/instagram.png?c224f9769f942d86039c4d5c8dd8175c");
+
+/***/ }),
+
+/***/ "./resources/img/comp_footer/linkedin.png":
+/*!************************************************!*\
+  !*** ./resources/img/comp_footer/linkedin.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/linkedin.png?3b6a86b6453354b6ea4055a857b9c9f0");
+
+/***/ }),
+
+/***/ "./resources/img/comp_footer/twitter.png":
+/*!***********************************************!*\
+  !*** ./resources/img/comp_footer/twitter.png ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/twitter.png?3d7508f946eab51b9b955c3c5812b33b");
+
+/***/ }),
+
+/***/ "./resources/img/comp_footer/youtube.png":
+/*!***********************************************!*\
+  !*** ./resources/img/comp_footer/youtube.png ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/youtube.png?51b204e26281ef0094dfccbb16b31db2");
+
+/***/ }),
+
+/***/ "./resources/img/comp_navbar/hamburguer.png":
+/*!**************************************************!*\
+  !*** ./resources/img/comp_navbar/hamburguer.png ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/hamburguer.png?ff0b5175459187e6c1054d2fe5964bdc");
+
+/***/ }),
+
+/***/ "./resources/img/comp_navbar/universityEmblem.png":
+/*!********************************************************!*\
+  !*** ./resources/img/comp_navbar/universityEmblem.png ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";

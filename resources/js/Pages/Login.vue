@@ -1,9 +1,10 @@
 <template>
-  Olá sou a Login!
-  <input type="email" v-model="user.email">
-  <input type="password" v-model="user.password">
-  <button v-on:click="login()">Login Seguro</button>
-  <button v-on:click="teste()">Teste</button>
+  <div id="container">
+    <h1> Aq é o Login </h1>
+      <input type="email" v-model="user.email">
+      <input type="password" v-model="user.password">
+    <button v-on:click="login()">Login Seguro</button>
+  </div>
 </template>
 
 <script>
@@ -31,5 +32,14 @@ export default {
 </script>
 
 <style>
-
+  h1{
+    font-size: 45;
+  }
+  #container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+  }
 </style>

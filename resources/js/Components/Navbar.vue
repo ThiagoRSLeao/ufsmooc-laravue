@@ -1,42 +1,71 @@
 <template>
     <header>
-        <button id="nav-menu"> /// </button>
+        <div v-if="isMobile" v-on:click="dropDown"  id="nav-menu">
+            <img src="..\..\img\comp_navbar/hamburguer.png"/>
+        </div>
         <div class="img-wrapper">
-            <router-link to="/home"> <img src="..\..\img\landing/universityEmblem.png" id="universityEmblem" alt="Emblema UFSM" /> </router-link>
+            <router-link to="/home"> <img src="..\..\img\comp_navbar/universityEmblem.png" id="universityEmblem" alt="Emblema UFSM" /> </router-link>
         </div>
-        <div class='nav-container'>
-            <div class='nav-box-pages'> 
-                <span><router-link to="/panel"> Painel </router-link></span> 
-                <span><router-link to="/courses"> Cursos </router-link></span>
-                <span><router-link to="/about"> Sobre </router-link></span>
-                <span><router-link to="/doubts"> Dúvidas </router-link></span>
-            </div>
-            <div class='nav-box-login'>            
-                <span><router-link to="/login"> Entrar </router-link></span>
-                <span class='register-btn' ><router-link  to="/register"> Cadastrar </router-link></span>
-            </div>
+        <div class='nav-box-pages' v-bind:class="{open: dropMenu, mobile: isMobile}"> 
+            <span><router-link to="/panel"> Painel </router-link></span> 
+            <span><router-link to="/courses"> Cursos </router-link></span>
+            <span><router-link to="/about"> Sobre </router-link></span>
+            <span><router-link to="/doubts"> Dúvidas </router-link></span>
         </div>
-        <button id="teste"> User </button>
+        <div class='nav-box-login' v-if="loggedIn">
+            <!--FOTO-->
+        </div>
+        <div class='nav-box-login' v-else>            
+            <span><router-link to="/login"> Entrar </router-link></span>
+            <span v-if="!isMobile" class='register-btn'><router-link  to="/register"> Cadastrar </router-link></span>
+        </div>
     </header>
 </template>
 
 <script>
 export default{
-    name: "Navbar"
+    name: "Navbar",
+    data() {
+        return {
+            dropMenu: false,
+            windowWidth: window.innerWidth,
+        }
+    },
+    methods: {
+        onResize(){
+            this.windowWidth = window.innerWidth;
+        },
+        dropDown(){
+            var nav = document.getElementById("nav-container");
+            this.dropMenu = !this.dropMenu;
+            if(this.dropMenu){
+                console.log("Aberto")
+            }
+            else{
+                console.log("Fechado")
+            }
+        },
+    },
+    computed: {
+        isMobile(){
+            console.log(this.windowWidth);
+            return this.windowWidth < 860;
+        }
+    },
+    mounted() {
+        this.$nextTick(() => {
+            window.addEventListener('resize', this.onResize);
+        })
+    },
+
+    beforeDestroy() { 
+        window.removeEventListener('resize', this.onResize); 
+    }
 }
 
-/*const btn = document.getElementById('nav-menu');
 
-btn.addEventListener("click", function(){
-    var nav = document.getElementById("nav-container");
 
-    if(nav.style.display === "none"){
-        nav.style.display = "block";
-    }
-    else{
-        nav.style.display = "none";
-    }
-})*/
+
 </script>
 
 <style>
@@ -44,7 +73,6 @@ btn.addEventListener("click", function(){
 {
     margin-left: 50px;
     width: 120px;
-    padding-top: 6px;
 }
 header
 {
@@ -54,35 +82,54 @@ header
     align-items: center;
     height: 80px;
     width: 100%;
-    background: #21376B;
+    background: var(--main-color);
     margin-left: 0px;
-}
-.nav-container
-{
-    margin-left: 20px;
-    height: 100px;
-    width: inherit; 
 }
 .nav-box-pages
 {
+    margin-left: 20px;
+    height: 100px;
+    width: inherit;
     padding-top: 38px;
-    height: 55px;
     float: left;
+}
+.nav-box-pages.mobile{
+    display: none;
+}
+.nav-box-pages.open{
+    display: block;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow:column;
+    background-color: var(--main-color);
+    border-right: 2px var(--second-color) solid;
+    border-bottom: 2px var(--second-color) solid;
+    width: 180px;
+    height: 240px;
+    margin-left: 0;
+    padding: 0;
+    position:absolute;
+    top: 80px;
+    left: 0;
 }
 .nav-box-login
 {
-    margin-right: 50px;
-    padding-top: 30px;
+    font-size: 16px;
+    min-width: 75px;
+    margin: 0 10px;
     height: 75px;
-    width: 180px;
     display: flex;
     align-items: center;    
     float: right;
+    justify-content: center;
 }
 .register-btn
 {
+    margin-left: 20px;
+    margin-right: 40px;
     border-radius: 15px;    
-    background-color:#395EB7;
+    background-color:var(--second-color);
     padding: 20px;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -121,8 +168,6 @@ header
 }
 .nav-box-login > span
 {
-    padding-right: 10px;
-    padding-left: 10px;
     font-size: 14pt;
     text-decoration: none;    
     height: auto;
@@ -134,29 +179,22 @@ header
     color: rgb(182, 182, 182);
 }
 #nav-menu{
-    margin: 0 20px;
-    display: none;
+    min-width: 75px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#teste{
-    margin: 0 20px;
-    display: none;
+#nav-menu > img{
+    width: 28px;
 }
 @media (max-width: 860px){
-    .nav-container{
-        display: none;
-    }
     .img-wrapper{
         width: 100%;
         text-align: center;
     }
     #universityEmblem{
         margin-left: 0;
-    }
-    #nav-menu{
-        display: block;
-    }
-    #teste{
-        display: block;
     }
 }
 </style>
