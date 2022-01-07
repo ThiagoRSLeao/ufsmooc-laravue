@@ -19587,53 +19587,9 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Components/Navbar.vue?vue&type=script&lang=js ***!
   \************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Navbar",
-  data: function data() {
-    return {
-      dropMenu: false,
-      windowWidth: window.innerWidth
-    };
-  },
-  methods: {
-    onResize: function onResize() {
-      this.windowWidth = window.innerWidth;
-    },
-    dropDown: function dropDown() {
-      var nav = document.getElementById("nav-container");
-      this.dropMenu = !this.dropMenu;
-
-      if (this.dropMenu) {
-        console.log("Aberto");
-      } else {
-        console.log("Fechado");
-      }
-    }
-  },
-  computed: {
-    isMobile: function isMobile() {
-      console.log(this.windowWidth);
-      return this.windowWidth < 860;
-    }
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    this.$nextTick(function () {
-      window.addEventListener('resize', _this.onResize);
-    });
-  },
-  beforeDestroy: function beforeDestroy() {
-    window.removeEventListener('resize', this.onResize);
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\laragon\\www\\cachorro\\resources\\js\\Components\\Navbar.vue: Unexpected token (42:2)\n\n\u001b[0m \u001b[90m 40 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 41 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 42 |\u001b[39m \u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 43 |\u001b[39m \u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 44 |\u001b[39m \u001b[90m/*const btn = document.getElementById('nav-menu');\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m \u001b[90m>>>>>>> 56c1bc963f88767ce42987b50a801d108edd5ee2\u001b[39m\u001b[0m\n    at Parser._raise (C:\\laragon\\www\\cachorro\\node_modules\\@babel\\parser\\lib\\index.js:541:17)\n    at Parser.raiseWithData (C:\\laragon\\www\\cachorro\\node_modules\\@babel\\parser\\lib\\index.js:534:17)\n    at Parser.raise (C:\\laragon\\www\\cachorro\\node_modules\\@babel\\parser\\lib\\index.js:495:17)\n    at Parser.unexpected (C:\\laragon\\www\\cachorro\\node_modules\\@babel\\parser\\lib\\index.js:3580:16)\n    at Parser.parseExprAtom (C:\\laragon\\www\\cachorro\\node_modules\\@babel\\parser\\lib\\index.js:12026:22)\n    at Parser.parseExprSubscripts (C:\\laragon\\www\\cachorro\\node_modules\\@babel\\parser\\lib\\index.js:11584:23)\n    at Parser.parseUpdate (C:\\laragon\\www\\cachorro\\node_modules\\@babel\\parser\\lib\\index.js:11564:21)\n    at Parser.parseMaybeUnary (C:\\laragon\\www\\cachorro\\node_modules\\@babel\\parser\\lib\\index.js:11539:23)\n    at Parser.parseMaybeUnaryOrPrivate (C:\\laragon\\www\\cachorro\\node_modules\\@babel\\parser\\lib\\index.js:11353:61)\n    at Parser.parseExprOpBaseRightExpr (C:\\laragon\\www\\cachorro\\node_modules\\@babel\\parser\\lib\\index.js:11467:34)");
 
 /***/ }),
 
@@ -19818,13 +19774,13 @@ var _hoisted_12 = {
 
 var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Cadastrar ");
 
-function render(_ctx, _cache, $props, $setup, $data, $options) {
+function render(_ctx, _cache) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("header", null, [$options.isMobile ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("header", null, [_ctx.isMobile ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
     key: 0,
     onClick: _cache[0] || (_cache[0] = function () {
-      return $options.dropDown && $options.dropDown.apply($options, arguments);
+      return _ctx.dropDown && _ctx.dropDown.apply(_ctx, arguments);
     }),
     id: "nav-menu"
   }, _hoisted_2)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
@@ -19838,8 +19794,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["nav-box-pages", {
-      open: $data.dropMenu,
-      mobile: $options.isMobile
+      open: _ctx.dropMenu,
+      mobile: _ctx.isMobile
     }])
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/panel"
@@ -19888,7 +19844,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })]), !$options.isMobile ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  })]), !_ctx.isMobile ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/register"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
