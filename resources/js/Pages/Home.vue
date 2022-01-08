@@ -26,7 +26,7 @@ export default {
   
   .courses-btn{  
     color: white;
-    background-color:var(--main-color);
+    background-color:var(--second-color);
     padding: 16px 20px;
     text-decoration: none;    
     height: auto;
