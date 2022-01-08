@@ -77,33 +77,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  id: "container"
+  "class": "login-background"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, " Aq é o Login ", -1
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, " Faça seu login ", -1
+/* HOISTED */
+);
+
+var _hoisted_3 = {
+  "class": "login"
+};
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "pass-remember"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  type: "checkbox",
+  id: "check-box"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "check-box"
+}, " Lembrar minha senha ")], -1
 /* HOISTED */
 );
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("main", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    id: "user",
+    placeholder: "E-mail",
     type: "email",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
       return $data.user.email = $event;
-    })
+    }),
+    required: ""
   }, null, 512
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.user.email]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    id: "pass",
+    placeholder: "Senha",
     type: "password",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $data.user.password = $event;
-    })
+    }),
+    required: ""
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.user.password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.user.password]])]), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    id: "login-btn",
     onClick: _cache[2] || (_cache[2] = function ($event) {
       return $options.login();
     })
-  }, "Login Seguro")]);
+  }, "Entrar")])]);
 }
 
 /***/ }),
@@ -124,7 +146,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nh1{\r\n    font-size: 45;\n}\n#container{\r\n    height: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-flow: column;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nmain{\r\n    height: 100vh;\r\n    display: flex;\r\n    align-items: center;\r\n    flex-flow: column;\n}\n.login-background{\r\n    margin-top: 3%;\r\n    display: flex;\r\n    align-items: center;\r\n    flex-flow: column;\r\n    background-color: white;\r\n    box-sizing: border-box;\r\n    border: 1px solid #ECECEC;\r\n    border-radius: 20px;\r\n    padding: 3% 5%;\n}\nh1{\r\n    min-width: -webkit-max-content;\r\n    min-width: -moz-max-content;\r\n    min-width: max-content;\r\n    font-style: normal;\r\n    font-size: 30px;\n}\n.login{\r\n    display: flex;\r\n    align-items: center;\r\n    flex-flow: column;\r\n    margin-top: 20px;\n}\n.login > input{\r\n    width: 350px;\r\n    box-sizing: border-box;\r\n    margin: 5px 0;\r\n    background-color: white;\r\n    border: 1px solid rgba(12, 20, 39, 0.25);\r\n    padding: 10px 15px;\r\n    border-radius: 20px;\n}\n.pass-remember{\r\n    display: flex;\r\n    align-items: center;\r\n    color: #A0A0A0;\r\n    width: 100%;\r\n    margin-left: 10px;\r\n    padding-top: 5px;\r\n    margin-bottom: 15px;\r\n    font-size: 20px;\n}\ninput[type=\"checkbox\"]{\r\n    -webkit-appearance: none;\r\n       -moz-appearance: none;\r\n            appearance: none;\r\n    border-radius: 4px;\r\n    border: 1px inset gainsboro;\r\n    cursor: pointer;\r\n    width: 18px;\r\n    height: 18px;\r\n    margin-right: 10px;\r\n    box-shadow: inset -3px -3px 7px #FFFFFF, inset 3px 3px 7px rgba(156, 156, 156, 0.48);\n}\ninput[type=\"checkbox\"]:checked:before{\r\n    font: arial;\r\n    font-style: oblique;\r\n    content: '\\2714';\r\n    display: block;\r\n    text-align: center;\r\n    margin-top: -3px;\r\n    margin-left: -3px;\r\n    color: var(--second-color);\r\n    font-weight: bold;\n}\n#login-btn{\r\n    width: 350px;\r\n    color: white;\r\n    box-sizing: border-box;\r\n    border-radius: 20px;\r\n    background-color: var(--second-color);\r\n    padding: 10px 15px;\r\n    box-shadow: 4px 4px 4px gray;\n}\n#login-btn:hover{\r\n    cursor: pointer;\r\n    color: rgb(182, 182, 182);\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

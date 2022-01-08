@@ -31,7 +31,7 @@ export default {
     text-decoration: none;    
     height: auto;
     border-radius: 15px;   
-    box-shadow: 4px 4px 4px black;
+    box-shadow: 4px 4px 4px gray;
   }
   .courses-btn:hover{
     cursor: pointer;
