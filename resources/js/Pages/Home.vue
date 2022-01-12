@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">    
+  <div id="mainContainer">    
     <main>
       <h1> O que você gostaria de aprender?</h1>
       <p> Faça cursos online gratuitamente e receba certificados pela Universidade Federal de Santa Maria </p>
@@ -7,7 +7,7 @@
         <router-link class="courses-btn" to="/courses"> Ver cursos </router-link>
       </div>
     </main>
-    <img class="ufsm-people" src="..\..\img\landing/ufsmPeople.png" alt="UFSM photo" />
+    <img class="ufsm-people" src="..\..\img\landing\ufsmPeople.png" alt="UFSM photo" />
   </div>
 </template>
 
@@ -31,7 +31,7 @@ export default {
     text-decoration: none;    
     height: auto;
     border-radius: 15px;   
-    box-shadow: 4px 4px 4px gray;
+    box-shadow: 0 4px 3px var(--light-shadow);
   }
   .courses-btn:hover{
     cursor: pointer;
@@ -55,8 +55,8 @@ export default {
     .ufsm-people {
       height: 300px;
     }
-    .main-container{
-      height: 100%;
+    #mainContainer{
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -70,7 +70,7 @@ export default {
     .ufsm-people {
       height: 350px;
     }
-    .main-container{
+    #mainContainer{
       height: 100vh;
       display: flex;
       align-items: center;

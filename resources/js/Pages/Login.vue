@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <div class="login-background">
+  <div id="mainContainer">
+    <div id="loginBox">
       <h1> Faça seu login </h1>
       <div class="login">
         <input id="user" placeholder="E-mail" type="email" v-model="user.email" required/>
@@ -10,12 +10,38 @@
         <input type="checkbox" id="check-box"/>
         <label for="check-box"> Lembrar minha senha </label>
       </div>
-      <button id="login-btn" v-on:click="login()">Entrar</button>
+      <button id="loginBtn" v-on:click="login()"> Entrar </button>
+      <div id="forgotWrapper">
+        <a id="forgotPass"> Esqueceu a senha? </a>
+      </div>
+      <b> Login com </b>
+      <div id="socialLogin">
+        <div class="social-box"><img src="..\..\img\icons\google_login.png" /></div>
+        <div class="social-box"><img src="..\..\img\icons\facebook_login.png" /></div>
+        <div class="social-box"><img src="..\..\img\icons\apple_login.png" /></div>
+      </div>
+      <div id="ou">
+        <svg width="140" height="2" viewBox="0 0 184 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.499777">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 1L183 1L1 1Z" fill="#B5AEAE"/>
+          <path d="M1 1L183 1" stroke="#A6A1A1" stroke-width="2" stroke-linecap="square"/>
+          </g>
+        </svg>
+        <span> ou </span>
+        <svg width="140" height="2" viewBox="0 0 184 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.499777">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 1L183 1L1 1Z" fill="#B5AEAE"/>
+          <path d="M1 1L183 1" stroke="#A6A1A1" stroke-width="2" stroke-linecap="square"/>
+          </g>
+        </svg>
+      </div>
+      <button id="createBtn"> Criar conta </button>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
 export default {
   data(){
     return {
@@ -27,35 +53,37 @@ export default {
   },
   methods:{
     async login(){
-      console.log("Tentei logar");
       var res = await axios.post("/api/auth/login", this.user);
       console.log(res);
       this.$store.commit("setToken", res.data);
     },
-    teste(){      
-      console.log("Tentei logar");
-    }
   }
 }
 </script>
 
-<style>
-  main{
-    height: 100vh;
+<style scoped>
+*{
+  --login-gray: #B5AEAE;
+}
+  #mainContainer{
+    min-height: 100vh;
     display: flex;
     align-items: center;
     flex-flow: column;
   }
-  .login-background{
-    margin-top: 3%;
+  #loginBox{
+    margin: 50px 0;
     display: flex;
     align-items: center;
     flex-flow: column;
     background-color: white;
     box-sizing: border-box;
-    border: 1px solid #ECECEC;
+    border: 1px solid var(--login-gray);
     border-radius: 20px;
-    padding: 3% 5%;
+    padding: 20px 50px;
+  }
+  #loginBox > *{
+    margin: 10px 0;
   }
   h1{
     min-width: max-content;
@@ -66,7 +94,6 @@ export default {
     display: flex;
     align-items: center;
     flex-flow: column;
-    margin-top: 20px;
   }
   .login > input{
     width: 350px;
@@ -80,7 +107,7 @@ export default {
   .pass-remember{
     display: flex;
     align-items: center;
-    color: #A0A0A0;
+    color: #B5AEAE;
     width: 100%;
     margin-left: 10px;
     padding-top: 5px;
@@ -108,17 +135,65 @@ export default {
     color: var(--second-color);
     font-weight: bold;
   }
-  #login-btn{
+  #loginBtn{
     width: 350px;
     color: white;
     box-sizing: border-box;
     border-radius: 20px;
     background-color: var(--second-color);
     padding: 10px 15px;
-    box-shadow: 4px 4px 4px gray;
+    box-shadow: 0 4px 3px var(--light-shadow);
   }
-  #login-btn:hover{
+  #loginBtn:hover{
     cursor: pointer;
     color: rgb(182, 182, 182);
+  }
+  #forgotWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    color: var(--second-color);
+    font-weight: bold;
+  }
+  #socialLogin{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .social-box{
+    box-sizing: border-box;
+    border: 1px solid #ECECEC;
+    border-radius: 20px;
+    height: 55px;
+    width: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 3px var(--light-shadow);
+    cursor: pointer;
+  }
+  #ou{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+  }
+  #ou span{
+    margin: 0 20px;
+    color: var(--login-gray);
+  }
+  #createBtn{
+    color: var(--second-color);
+    font-weight: 600;
+    width: 350px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background-color: white;
+    box-shadow: 0 4px 3px var(--light-shadow);
+  }
+  #createBtn:hover{
+    
   }
 </style>

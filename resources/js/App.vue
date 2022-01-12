@@ -27,6 +27,7 @@ export default {
     font-size: 15px;
     --main-color: #21376B;
     --second-color: #395EB7;
+    --light-shadow: gainsboro;
 }
 input:focus
 {
