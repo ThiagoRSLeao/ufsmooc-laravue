@@ -38,8 +38,7 @@ export default {
 
 <style>
     .notfound-message-wrapper{
-        height: 100%;
-        padding: 20px 20px;
+        min-height: 100vh;
     }
 
 </style>

@@ -12,7 +12,7 @@
       </div>
       <button id="loginBtn" v-on:click="login()"> Entrar </button>
       <div id="forgotWrapper">
-        <a id="forgotPass"> Esqueceu a senha? </a>
+        <router-link to="a"><a id="forgotPass"> Esqueceu a senha? </a></router-link>
       </div>
       <b> Login com </b>
       <div id="socialLogin">
@@ -42,6 +42,7 @@
 
 <script>
 import { RouterLink } from 'vue-router';
+import Swal from 'sweetalert2'
 export default {
   data(){
     return {
@@ -56,9 +57,25 @@ export default {
       var res = await axios.post("/api/auth/login", this.user);
       console.log(res);
       this.$store.commit("setToken", res.data);
+      Swal.fire({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            },
+            icon: 'success',
+            iconColor: 'var(--second-color)',
+            title: '😎😎😎😎😎😎😎😎😎😎😎'
+        });
+        this.$router.push('/')
     },
   }
 }
+
 </script>
 
 <style scoped>
@@ -78,7 +95,7 @@ export default {
     flex-flow: column;
     background-color: white;
     box-sizing: border-box;
-    border: 1px solid var(--login-gray);
+    border: 1px solid #ECECEC;
     border-radius: 20px;
     padding: 20px 50px;
   }
@@ -104,15 +121,14 @@ export default {
     padding: 10px 15px;
     border-radius: 20px;
   }
-  .pass-remember{
+  #mainContainer > #loginBox > .pass-remember{
     display: flex;
     align-items: center;
     color: #B5AEAE;
     width: 100%;
-    margin-left: 10px;
-    padding-top: 5px;
-    margin-bottom: 15px;
     font-size: 20px;
+    margin-left: 10px;
+    margin-top: -4px;
   }
   input[type="checkbox"]{
     appearance: none;
@@ -154,6 +170,7 @@ export default {
     justify-content: flex-end;
     color: var(--second-color);
     font-weight: bold;
+    margin-right: 20px;
   }
   #socialLogin{
     width: 100%;
@@ -194,6 +211,6 @@ export default {
     box-shadow: 0 4px 3px var(--light-shadow);
   }
   #createBtn:hover{
-    
+    cursor: pointer;
   }
 </style>
