@@ -35,7 +35,7 @@
           </g>
         </svg>
       </div>
-      <button id="createBtn"> Criar conta </button>
+      <router-link to="/register"><button id="createBtn"> Criar conta </button></router-link>
     </div>
   </div>
 </template>
@@ -69,7 +69,7 @@ export default {
             },
             icon: 'success',
             iconColor: 'var(--second-color)',
-            title: '😎😎😎😎😎😎😎😎😎😎😎'
+            title: 'Login Successful'
         });
         this.$router.push('/')
     },
@@ -79,9 +79,6 @@ export default {
 </script>
 
 <style scoped>
-*{
-  --login-gray: #B5AEAE;
-}
   #mainContainer{
     min-height: 100vh;
     display: flex;

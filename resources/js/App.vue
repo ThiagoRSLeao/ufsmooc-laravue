@@ -28,6 +28,7 @@ export default {
     --main-color: #21376B;
     --second-color: #395EB7;
     --light-shadow: gainsboro;
+    --login-gray: #B5AEAE;
 }
 input:focus
 {
