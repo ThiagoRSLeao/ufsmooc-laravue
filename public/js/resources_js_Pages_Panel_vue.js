@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       progression_max: 210,
-      tags: ["Aprendizado", "Sexo", "Tinder", "Emagrecimento", "Claudio", "TAG0121"],
+      tags: ["Aprendizado", "Vrau", "Nelson", "Emagrecimento", "Claudio", "TAG0121"],
       courses: []
     };
   },
