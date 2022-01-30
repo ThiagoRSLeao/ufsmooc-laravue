@@ -35,6 +35,11 @@ const routes = [
         component: () => import("../Pages/Register.vue"),
         path: "/register", 
     },
+    {
+        name: "notFound",
+        component: () => import("../Pages/NotFound.vue"),
+        path: "/:catchAll(.*)", 
+    }, 
 ];
 
 export default routes;

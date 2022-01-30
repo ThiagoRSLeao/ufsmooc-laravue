@@ -1,11 +1,13 @@
 <template>
-    <div class="notfound-message-wrapper">
-        <div>
-            Não foi possível encontrar esta página! 
-            <div class="wrapper">Você será redirecionado em... </div>
-            <div class="wrapper"><h5 class="timer" v-bind:innerHTML="timer"></h5></div>
+    <main>
+        <div class="notfound-message-wrapper">
+            <div>
+                Não foi possível encontrar esta página! 
+                <div class="wrapper">Você será redirecionado em... </div>
+                <div class="wrapper"><h5 class="timer" v-bind:innerHTML="timer"></h5></div>
+            </div>
         </div>
-    </div>
+    </main>
 </template>
 
 <script>
@@ -36,9 +38,12 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
     .notfound-message-wrapper{
         min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 </style>

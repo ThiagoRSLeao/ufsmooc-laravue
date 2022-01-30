@@ -44,5 +44,11 @@ body
     height: 100%;
     background-color: #F7F9FD;
 }
+main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
 
 </style>

@@ -18633,6 +18633,12 @@ var routes = [{
     return __webpack_require__.e(/*! import() */ "resources_js_Pages_Register_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../Pages/Register.vue */ "./resources/js/Pages/Register.vue"));
   },
   path: "/register"
+}, {
+  name: "notFound",
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ "resources_js_Pages_NotFound_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../Pages/NotFound.vue */ "./resources/js/Pages/NotFound.vue"));
+  },
+  path: "/:catchAll(.*)"
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (routes);
 
@@ -18834,7 +18840,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n*\r\n{\r\n    padding: 0;\r\n    margin: 0;\r\n    font-family: 'Rubik';\r\n    font-size: 15px;\r\n    --main-color: #21376B;\r\n    --second-color: #395EB7;\r\n    --light-shadow: gainsboro;\r\n    --login-gray: #B5AEAE;\n}\ninput:focus\r\n{\r\n    outline: none;\n}\nhtml\r\n{\r\n    height: 100%;\n}\nbody\r\n{\r\n    min-height: 100vh;\r\n    height: 100%;\r\n    background-color: #F7F9FD;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n*\r\n{\r\n    padding: 0;\r\n    margin: 0;\r\n    font-family: 'Rubik';\r\n    font-size: 15px;\r\n    --main-color: #21376B;\r\n    --second-color: #395EB7;\r\n    --light-shadow: gainsboro;\r\n    --login-gray: #B5AEAE;\n}\ninput:focus\r\n{\r\n    outline: none;\n}\nhtml\r\n{\r\n    height: 100%;\n}\nbody\r\n{\r\n    min-height: 100vh;\r\n    height: 100%;\r\n    background-color: #F7F9FD;\n}\nmain{\r\n    min-height: 100vh;\r\n    display: flex;\r\n    align-items: center;\r\n    flex-flow: column;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -43135,7 +43141,7 @@ var index = {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_Home_vue":1,"resources_js_Pages_Panel_vue":1,"resources_js_Pages_Courses_vue":1,"resources_js_Pages_About_vue":1,"resources_js_Pages_Doubts_vue":1,"resources_js_Pages_Login_vue":1,"resources_js_Pages_Register_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Home_vue":1,"resources_js_Pages_Panel_vue":1,"resources_js_Pages_Courses_vue":1,"resources_js_Pages_About_vue":1,"resources_js_Pages_Doubts_vue":1,"resources_js_Pages_Login_vue":1,"resources_js_Pages_Register_vue":1,"resources_js_Pages_NotFound_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

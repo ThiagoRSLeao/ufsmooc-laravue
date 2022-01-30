@@ -1,5 +1,5 @@
 <template>
-  <div id="mainCont">
+  <main>
     <div id="registerBox">
       <h1> Nova conta </h1>
       <div class="register">
@@ -60,7 +60,7 @@
       </div>
     </div>
     <h3> O nome completo será exibido nas emissões de certificados </h3>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -75,7 +75,7 @@ export default {
 </script>
 
 <style scoped>
-#mainCont{
+main{
     min-height: 100vh;
     display: flex;
     align-items: center;

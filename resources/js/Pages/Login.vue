@@ -1,5 +1,5 @@
 <template>
-  <div id="mainContainer">
+  <main>
     <div id="loginBox">
       <h1> Faça seu login </h1>
       <div class="login">
@@ -37,7 +37,7 @@
       </div>
       <router-link to="/register"><button id="createBtn"> Criar conta </button></router-link>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -79,12 +79,6 @@ export default {
 </script>
 
 <style scoped>
-  #mainContainer{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-  }
   #loginBox{
     margin: 50px 0;
     display: flex;

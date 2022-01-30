@@ -106,21 +106,18 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-0004d9e0");
 
 var _hoisted_1 = {
-  id: "mainContainer"
-};
-var _hoisted_2 = {
   id: "loginBox"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", null, " Faça seu login ", -1
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", null, " Faça seu login ", -1
 /* HOISTED */
 );
 
-var _hoisted_4 = {
+var _hoisted_3 = {
   "class": "login"
 };
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "pass-remember"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
   type: "checkbox",
@@ -131,21 +128,21 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_6 = {
+var _hoisted_5 = {
   id: "forgotWrapper"
 };
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
   id: "forgotPass"
 }, " Esqueceu a senha? ", -1
 /* HOISTED */
 );
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("b", null, " Login com ", -1
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("b", null, " Login com ", -1
 /* HOISTED */
 );
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   id: "socialLogin"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "social-box"
@@ -163,7 +160,7 @@ var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   id: "ou"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("svg", {
   width: "140",
@@ -205,7 +202,7 @@ var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 /* HOISTED */
 );
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
   id: "createBtn"
 }, " Criar conta ", -1
 /* HOISTED */
@@ -216,7 +213,7 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("main", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "user",
     placeholder: "E-mail",
     type: "email",
@@ -236,25 +233,25 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     required: ""
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.user.password]])]), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.user.password]])]), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
     id: "loginBtn",
     onClick: _cache[3] || (_cache[3] = function ($event) {
       return $options.login();
     })
-  }, " Entrar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  }, " Entrar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "a"
   }, {
     "default": _withId(function () {
-      return [_hoisted_7];
+      return [_hoisted_6];
     }),
     _: 1
     /* STABLE */
 
-  })]), _hoisted_8, _hoisted_9, _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  })]), _hoisted_7, _hoisted_8, _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/register"
   }, {
     "default": _withId(function () {
-      return [_hoisted_11];
+      return [_hoisted_10];
     }),
     _: 1
     /* STABLE */
@@ -281,7 +278,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#mainContainer[data-v-0004d9e0]{\r\n    min-height: 100vh;\r\n    display: flex;\r\n    align-items: center;\r\n    flex-flow: column;\n}\n#loginBox[data-v-0004d9e0]{\r\n    margin: 50px 0;\r\n    display: flex;\r\n    align-items: center;\r\n    flex-flow: column;\r\n    background-color: white;\r\n    box-sizing: border-box;\r\n    border: 1px solid #ECECEC;\r\n    border-radius: 20px;\r\n    padding: 20px 50px;\n}\n#loginBox > *[data-v-0004d9e0]{\r\n    margin: 10px 0;\n}\nh1[data-v-0004d9e0]{\r\n    min-width: -webkit-max-content;\r\n    min-width: -moz-max-content;\r\n    min-width: max-content;\r\n    font-style: normal;\r\n    font-size: 30px;\n}\n.login[data-v-0004d9e0]{\r\n    display: flex;\r\n    align-items: center;\r\n    flex-flow: column;\n}\n.login > input[data-v-0004d9e0]{\r\n    width: 350px;\r\n    box-sizing: border-box;\r\n    margin: 5px 0;\r\n    background-color: white;\r\n    border: 1px solid rgba(12, 20, 39, 0.25);\r\n    padding: 10px 15px;\r\n    border-radius: 20px;\n}\n#mainContainer > #loginBox > .pass-remember[data-v-0004d9e0]{\r\n    display: flex;\r\n    align-items: center;\r\n    color: #B5AEAE;\r\n    width: 100%;\r\n    font-size: 20px;\r\n    margin-left: 10px;\r\n    margin-top: -4px;\n}\ninput[type=\"checkbox\"][data-v-0004d9e0]{\r\n    -webkit-appearance: none;\r\n       -moz-appearance: none;\r\n            appearance: none;\r\n    border-radius: 4px;\r\n    border: 1px inset gainsboro;\r\n    cursor: pointer;\r\n    width: 18px;\r\n    height: 18px;\r\n    margin-right: 10px;\r\n    box-shadow: inset -3px -3px 7px #FFFFFF, inset 3px 3px 7px rgba(156, 156, 156, 0.48);\n}\ninput[type=\"checkbox\"][data-v-0004d9e0]:checked:before{\r\n    font: arial;\r\n    font-style: oblique;\r\n    content: '\\2714';\r\n    display: block;\r\n    text-align: center;\r\n    margin-top: -3px;\r\n    margin-left: -3px;\r\n    color: var(--second-color);\r\n    font-weight: bold;\n}\n#loginBtn[data-v-0004d9e0]{\r\n    width: 350px;\r\n    color: white;\r\n    box-sizing: border-box;\r\n    border-radius: 20px;\r\n    background-color: var(--second-color);\r\n    padding: 10px 15px;\r\n    box-shadow: 0 4px 3px var(--light-shadow);\n}\n#loginBtn[data-v-0004d9e0]:hover{\r\n    cursor: pointer;\r\n    color: rgb(182, 182, 182);\n}\n#forgotWrapper[data-v-0004d9e0]{\r\n    display: flex;\r\n    width: 100%;\r\n    justify-content: flex-end;\r\n    color: var(--second-color);\r\n    font-weight: bold;\r\n    margin-right: 20px;\n}\n#socialLogin[data-v-0004d9e0]{\r\n    width: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-evenly;\n}\n.social-box[data-v-0004d9e0]{\r\n    box-sizing: border-box;\r\n    border: 1px solid #ECECEC;\r\n    border-radius: 20px;\r\n    height: 55px;\r\n    width: 66px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    box-shadow: 0 4px 3px var(--light-shadow);\r\n    cursor: pointer;\n}\n#ou[data-v-0004d9e0]{\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 350px;\n}\n#ou span[data-v-0004d9e0]{\r\n    margin: 0 20px;\r\n    color: var(--login-gray);\n}\n#createBtn[data-v-0004d9e0]{\r\n    color: var(--second-color);\r\n    font-weight: 600;\r\n    width: 350px;\r\n    box-sizing: border-box;\r\n    border-radius: 20px;\r\n    padding: 10px 15px;\r\n    background-color: white;\r\n    box-shadow: 0 4px 3px var(--light-shadow);\n}\n#createBtn[data-v-0004d9e0]:hover{\r\n    cursor: pointer;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#loginBox[data-v-0004d9e0]{\r\n    margin: 50px 0;\r\n    display: flex;\r\n    align-items: center;\r\n    flex-flow: column;\r\n    background-color: white;\r\n    box-sizing: border-box;\r\n    border: 1px solid #ECECEC;\r\n    border-radius: 20px;\r\n    padding: 20px 50px;\n}\n#loginBox > *[data-v-0004d9e0]{\r\n    margin: 10px 0;\n}\nh1[data-v-0004d9e0]{\r\n    min-width: -webkit-max-content;\r\n    min-width: -moz-max-content;\r\n    min-width: max-content;\r\n    font-style: normal;\r\n    font-size: 30px;\n}\n.login[data-v-0004d9e0]{\r\n    display: flex;\r\n    align-items: center;\r\n    flex-flow: column;\n}\n.login > input[data-v-0004d9e0]{\r\n    width: 350px;\r\n    box-sizing: border-box;\r\n    margin: 5px 0;\r\n    background-color: white;\r\n    border: 1px solid rgba(12, 20, 39, 0.25);\r\n    padding: 10px 15px;\r\n    border-radius: 20px;\n}\n#mainContainer > #loginBox > .pass-remember[data-v-0004d9e0]{\r\n    display: flex;\r\n    align-items: center;\r\n    color: #B5AEAE;\r\n    width: 100%;\r\n    font-size: 20px;\r\n    margin-left: 10px;\r\n    margin-top: -4px;\n}\ninput[type=\"checkbox\"][data-v-0004d9e0]{\r\n    -webkit-appearance: none;\r\n       -moz-appearance: none;\r\n            appearance: none;\r\n    border-radius: 4px;\r\n    border: 1px inset gainsboro;\r\n    cursor: pointer;\r\n    width: 18px;\r\n    height: 18px;\r\n    margin-right: 10px;\r\n    box-shadow: inset -3px -3px 7px #FFFFFF, inset 3px 3px 7px rgba(156, 156, 156, 0.48);\n}\ninput[type=\"checkbox\"][data-v-0004d9e0]:checked:before{\r\n    font: arial;\r\n    font-style: oblique;\r\n    content: '\\2714';\r\n    display: block;\r\n    text-align: center;\r\n    margin-top: -3px;\r\n    margin-left: -3px;\r\n    color: var(--second-color);\r\n    font-weight: bold;\n}\n#loginBtn[data-v-0004d9e0]{\r\n    width: 350px;\r\n    color: white;\r\n    box-sizing: border-box;\r\n    border-radius: 20px;\r\n    background-color: var(--second-color);\r\n    padding: 10px 15px;\r\n    box-shadow: 0 4px 3px var(--light-shadow);\n}\n#loginBtn[data-v-0004d9e0]:hover{\r\n    cursor: pointer;\r\n    color: rgb(182, 182, 182);\n}\n#forgotWrapper[data-v-0004d9e0]{\r\n    display: flex;\r\n    width: 100%;\r\n    justify-content: flex-end;\r\n    color: var(--second-color);\r\n    font-weight: bold;\r\n    margin-right: 20px;\n}\n#socialLogin[data-v-0004d9e0]{\r\n    width: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-evenly;\n}\n.social-box[data-v-0004d9e0]{\r\n    box-sizing: border-box;\r\n    border: 1px solid #ECECEC;\r\n    border-radius: 20px;\r\n    height: 55px;\r\n    width: 66px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    box-shadow: 0 4px 3px var(--light-shadow);\r\n    cursor: pointer;\n}\n#ou[data-v-0004d9e0]{\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 350px;\n}\n#ou span[data-v-0004d9e0]{\r\n    margin: 0 20px;\r\n    color: var(--login-gray);\n}\n#createBtn[data-v-0004d9e0]{\r\n    color: var(--second-color);\r\n    font-weight: 600;\r\n    width: 350px;\r\n    box-sizing: border-box;\r\n    border-radius: 20px;\r\n    padding: 10px 15px;\r\n    background-color: white;\r\n    box-shadow: 0 4px 3px var(--light-shadow);\n}\n#createBtn[data-v-0004d9e0]:hover{\r\n    cursor: pointer;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
